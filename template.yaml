@@ -42,7 +42,7 @@ Resources:
   ReportingTopicSubscription:
     Type: AWS::SNS::Subscription
     Properties:
-      Endpoint: m-kureha@aptpod.co.jp
+      Endpoint: your-email@example.com
       Protocol: email
       TopicArn: !Ref ReportingTopic
 
