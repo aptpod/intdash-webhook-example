@@ -58,7 +58,7 @@ func (h *Handler) HandleAPIGatewayProxy(ctx context.Context, request events.APIG
 			StatusCode: http.StatusBadRequest,
 		}, nil
 	}
-	if !(body.ResourceType == "measurement" && body.Action == "completed") {
+	if !(body.ResourceType == "measurement" && body.Action == "finished") {
 		log.Printf("[Info] Got unsupported resource type or action: %v", err)
 		return events.APIGatewayProxyResponse{
 			Body:       "Unsupported resource type or action",
